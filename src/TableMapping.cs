@@ -48,13 +48,13 @@ namespace SQLite
                 var ti = baseType.GetTypeInfo();
                 props.AddRange(
                     ti.DeclaredProperties
-                    .Where(p => 
-                    !p.PropertyType.GetTypeInfo().IsClass && 
-                    (p.GetMethod != null && p.GetMethod.IsPublic) || 
-                    (p.SetMethod != null && p.SetMethod.IsPublic) || 
-                    (p.GetMethod != null && p.GetMethod.IsStatic) || 
+                    .Where(p => (p.PropertyType.GetTypeInfo().IsPrimitive || p.PropertyType.GetTypeInfo().BaseType == typeof(System.ValueType) || p.PropertyType == typeof(string)) &&
+                    (
+                    (p.GetMethod != null && p.GetMethod.IsPublic) ||
+                    (p.SetMethod != null && p.SetMethod.IsPublic) ||
+                    (p.GetMethod != null && p.GetMethod.IsStatic) ||
                     (p.SetMethod != null && p.SetMethod.IsStatic)
-                    ));
+                    )));
 
                 baseType = ti.BaseType;
             }

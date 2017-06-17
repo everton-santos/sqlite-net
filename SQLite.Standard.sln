@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLite-net", "src\SQLite-net.csproj", "{A046CAD1-EE04-446A-9B2E-ECA0273E0279}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteNetStandard", "src\SQLiteNetStandard.csproj", "{A046CAD1-EE04-446A-9B2E-ECA0273E0279}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
